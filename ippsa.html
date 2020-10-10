@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<script type="text/javascript">
+		function validateUserName()
+		{
+			var uname=document.getElementById("txtname").value;
+			if(uname.length<6 || uname==)
+			{
+				alert("username cant be less than 6 characters");
+				uname=prompt("enter correct username")
+				document.getElementById("txtname").value=uname;
+			}
+		}
+
+		function validateEmail(email)
+		{
+			if((email.indexOf("0")<1) || 
+				(email.indexOf(".",email.indexOf(("0")+1))<=
+				(email.indexOf("0")+1)))
+			{
+				alert("email format not correct");
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<section>
+		<form action="submit.htm">
+	<table border="1" align="center" width="40%">
+		<tr>
+			<th colspan="2">Signup form</th>
+		</tr>
+		<td>
+			Username:
+		</td>
+		<td>
+			<input type="text"
+			maxlength="12"
+			required
+			autofocus
+			placeholder="Enter your Username" 
+			id="txtname"
+			 name="txtname"/>
+		</td>
+		<tr>
+			<td>
+			Password
+		</td>
+		<td>
+			<input type="Password" id="txtpass" name="txtpass"/>
+		</td>
+	</tr>
+	<tr>
+			<td>
+			Email
+		</td>
+		<td>
+			<input type="Email"
+			maxlength="20"
+			required
+			autofocus
+			placeholder="Enter your mail" 
+			 id="txtmail" name="txtmail"/>
+		</td>
+	</tr>		
+	<tr>
+		<td>Mobile No.</td>
+		<td>
+			<input type="number" id="mobile" name="mobile"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Address
+		</td>
+		<td>
+			<textarea rows="3" cols="20"
+			name="txaddress" id="txaddress"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Gender
+		</td>
+		<td nowrap>
+			<input type="radio" value="M" id="rdogender" name="rdogender"/>Male
+			<input type="radio" value="F" id="rdogender" name="rdogender"/>Female
+			<input type="radio" value="T" id="rdogender" name="rdogender"/>Transgender
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Education
+		</td>
+		<td>
+			<input type="checkbox" value="BE" name="chkedu"/>BE
+			<input type="checkbox" value="MCA" name="chkedu"/>MCA
+			<input type="checkbox" value="MBA" name="chkedu"/>MBA
+			<input type="checkbox" value="MTECH" name="chkedu"/>MTECH
+			<input type="checkbox" value="BTECH" name="chkedu"/>BTECH
+		</td>
+		<tr>
+		<td>
+			DOB
+		</td>
+		<td>
+			<input type="date" id="dob" name="dob"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Experience
+		</td>
+		<td>0(yrs)
+			<input type="range"
+			min="0"
+			maxlength="20"
+			 id="Experience" name="Experience"/>20(yrs)
+		</td>
+	</tr>
+	<tr>
+		<td nowrap>
+			country:</td>
+		<td>
+			<select name="selcountry">
+				<option>india</option>
+				<option>india</option>
+				<option>india</option>
+				<option>india</option>
+				<option>india</option>
+				<option>india</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td nowrap>
+			Hobbies:</td>
+		<td>
+			<select name="selhobbies">
+				<option>drawing</option>
+				<option selected>dancing</option>
+				<option>singing</option>
+				<option>cooking</option>
+				<option>movies</option>
+				<option>yoga</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Profile Photo:</td>
+		<td>
+			<input type="file" name="Profile"/>
+		</td>
+	</tr>
+	<tr>
+		<td nowrap>My Favourite Song</td>
+		<td>
+			<audio controls>
+				<source src="Kalimba.mp3" type="audio/mpeg"/>
+			</audio>
+		</td>
+	</tr>
+	<tr>
+		<td nowrap>My Favourite Song</td>
+		<td>
+			<video width="150" height="100" controls="">
+				<source src="Kalimba.mp4" type="video/mp4"/>
+			</video>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">
+			<input type="submit" value="Register"/>
+		</td>
+		<td>
+			<button type="reset">Clear</button>
+		</td>
+	</tr>
+</table>
+</form>
+</section>
+</body>
+</html>
